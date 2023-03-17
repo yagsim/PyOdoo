@@ -9,11 +9,11 @@ Una vez terminado el docker-compose, para levantar el repositorio haríamos un d
 Acceso a la BD desde PyCharm
 Para acceder a la base de datos desde el IDE PyCharm:
 
-Dirigirse a la pestaña Database situada en el panel lateral derecho.
-Darle al + > Data Source > PostgreSQL
-Se nos abrirá una ventana para realizar la conexión, y la rellenamos con los credenciales de acceso a la bd.
-Al darle a Aplicar se nos abrirá la conexión a la bd en la tabla de Databases
-Entorno de Desarrollo con Visual Code
+- Dirigirse a la pestaña Database situada en el panel lateral derecho.
+- Darle al + > Data Source > PostgreSQL
+- Se nos abrirá una ventana para realizar la conexión, y la rellenamos con los credenciales de acceso a la bd.
+-  Al darle a Aplicar se nos abrirá la conexión a la bd en la tabla de Databases
+- Entorno de Desarrollo con Visual Code
 Para levantar Odoo con el docker-compose, el proceso es exactamente igual al que explico arriba.
 
 Una vez esté levantado y corriendo el Odoo, iremos a la tabla de la extensión de Docker en Visual Code. Allí pincharemos con el click derecho sobre el contenedor del servicio de odoo, y le daremos a "Attach Shell", esto nos abrirá una terminal dentro del entorno virutal del propio Odoo.
@@ -31,12 +31,12 @@ Si hacemos cambios en algún archivo dentro del repositorio del módulo, tendrem
 
 odoo -u dam21 -d odoo --db_host=db -r odoo -w odoo
 
--u: update
-dam21: nombre del módulo
--d: nombre de la base de datos
---db_host: IP de la base de datos
--r: usuario para la bd
--w: contraseña para la bd
+- -u: update
+- dam21: nombre del módulo
+- -d: nombre de la base de datos
+- --db_host: IP de la base de datos
+- -r: usuario para la bd
+- -w: contraseña para la bd
 Todas las modificaciones de los archivos del módulo se pueden hacer desde la interfaz de nuestro code, mediante la extensión de docker, o una mejor manera de hacerlo es desde un Visual Code dentro del propio entorno virual de Odoo.
 
 Para esto iremos a la extensión de Docker, al servicio Odoo dentro del contenedor, y haremos click derecho > "Attach Visual Studio Code". Esto nos abrirá un Code totalmente nuevo dentro del entorno de Odoo.
