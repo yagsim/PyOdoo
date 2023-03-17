@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+  odoo:
+    image: odoo:14.0
+    container_name: py_odoo
+    ports:
+      - "8069:8069"
+    depends_on:
+      - db
+  db:
+    container_name: py_odoo_db
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./datos:/var/lib/postgresql/data
